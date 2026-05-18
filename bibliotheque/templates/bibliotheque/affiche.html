@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du Livre</title>
+</head>
+<body>
+    <h1>Fiche Détaillée</h1>
+    <p>Vous consultez l'ouvrage suivant : {{ Livre }} (ID Système : {{ Livre.id }})</p>
+
+    <hr>
+
+    <p>
+        <a href="/bibliotheque/update/{{ Livre.id }}/">Modifier les informations</a>
+        |
+        <a href="/bibliotheque/delete/{{ Livre.id }}/">Supprimer cet ouvrage de la base</a>
+    </p>
+
+    <p><a href="/bibliotheque/">Retourner à l'index</a></p>
+</body>
+</html>
