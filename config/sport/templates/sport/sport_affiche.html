@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Sport</title></head>
+<body>
+  <h1>{{sport.nom}}</h1>
+  <p>Catégorie : {{sport.categorie}}</p>
+  <p>Nombre de joueurs : {{sport.nb_joueurs}}</p>
+  <p>{{sport.description}}</p>
+  <a href="/sport/update/{{sport.id}}/">Modifier</a>
+  — <a href="/sport/delete/{{sport.id}}/">Supprimer</a>
+  <br><a href="/sport/">Retour à la liste</a>
+</body>
+</html>

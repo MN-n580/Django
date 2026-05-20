@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Catégories</title></head>
+<body>
+  <h1>Liste des catégories</h1>
+  <a href="/sport/categories/ajout/">+ Ajouter une catégorie</a>
+  <ul>
+    {% for cat in categories %}
+      <li>
+        <a href="/sport/categories/read/{{cat.id}}/">{{cat.nom}}</a>
+        — <a href="/sport/categories/update/{{cat.id}}/">Modifier</a>
+        — <a href="/sport/categories/delete/{{cat.id}}/">Supprimer</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h1>Liste des sports</h1>
+  <a href="/sport/ajout/">+ Ajouter un sport</a>
+  <ul>
+    {% for s in sports %}
+      <li>{{s.nom}} ({{s.categorie}})</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>

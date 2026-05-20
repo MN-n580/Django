@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Ajouter une catégorie</title></head>
+<body>
+  <h1>Ajouter une catégorie</h1>
+  <form method="post" action="/sport/categories/traitement/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Envoyer">
+  </form>
+  <a href="/sport/categories/">Retour</a>
+</body>
+</html>

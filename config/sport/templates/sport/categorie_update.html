@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head><meta charset="UTF-8"><title>Modifier catégorie</title></head>
+<body>
+  <h1>Modifier la catégorie</h1>
+  <form method="post" action="/sport/categories/traitementupdate/{{id}}/">
+    {% csrf_token %}
+    {{ form.as_ul }}
+    <input type="submit" value="Enregistrer">
+  </form>
+  <a href="/sport/categories/">Retour</a>
+</body>
+</html>
